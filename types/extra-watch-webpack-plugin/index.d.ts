@@ -3,7 +3,7 @@
 // Definitions by: Dave Cardwell <https://github.com/davecardwell>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Plugin } from "webpack";
+import { Plugin, Compiler } from "webpack";
 
 export = ExtraWatchWebpackPlugin;
 
@@ -14,6 +14,7 @@ declare class ExtraWatchWebpackPlugin extends Plugin {
         dirs: string[];
     };
     constructor(options?: ExtraWatchWebpackPlugin.Options);
+    apply(compiler: Compiler): void;
 }
 
 declare namespace ExtraWatchWebpackPlugin {
